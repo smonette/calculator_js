@@ -1,6 +1,9 @@
 # Calculator
 
-Implement a calculator!
+`git clone` this repo to start the calculator homework.
+
+You can open `calculator.html` to see the (nonfunctional) calculator page.
+You're gonna make it work!
 
 1. `calculator.js` is provided and linked to the page for you, but it's blank,
 what's the first thing you write? (Without it, your JS won't be able to find any

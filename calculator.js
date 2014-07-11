@@ -7,6 +7,7 @@ window.onload = function () {
 	var calculate = function(x){
 		calc = calc + x;
 		display(x);
+		console.log(calc);
 	};
 
 	var display= function(y) {
@@ -35,8 +36,11 @@ window.onload = function () {
 		clearDisplay();
 		calc = " ";
 	};
+// Display 
+	var op_display = document.getElementById('operator_display');
+	var val_display = document.getElementById('result_display_value');
 
-
+// Number buttons
 	var one = document.getElementById('one');
   	var two = document.getElementById('two');
   	var three = document.getElementById('three');
@@ -48,17 +52,15 @@ window.onload = function () {
   	var nine = document.getElementById('nine');
   	var zero = document.getElementById('zero');
 
+// Operations buttons
 	var plus = document.getElementById('plus');
   	var minus = document.getElementById('minus');
   	var times = document.getElementById('times');
   	var divide = document.getElementById('divide');
-
   	var ent = document.getElementById('ent');
   	var clear = document.getElementById('clear');
 
-	var op_display = document.getElementById('operator_display');
-	var val_display = document.getElementById('result_display_value');
-
+// Set on clicks for all the buttons
 	one.onclick = function(event) {
 	 	calculate("1");
 	 }  
@@ -104,6 +106,8 @@ window.onload = function () {
 	 ent.onclick = function(event) {
 	 	clearDisplay();
 	 	result_display_value.innerHTML = eval(calc);
+	 	// Add the parenthesis so that the math "FOIL"s properly, assuming the user continues to compute with the final value
+	 	calc = "(" + calc + ")";
 	 } 
 	 clear.onclick = function(event){
 	 	clearAll();

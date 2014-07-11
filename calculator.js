@@ -106,7 +106,7 @@ window.onload = function () {
 	 ent.onclick = function(event) {
 	 	clearDisplay();
 	 	result_display_value.innerHTML = eval(calc);
-	 	// Add the parenthesis so that the math "FOIL"s properly, assuming the user continues to compute with the final value
+	 	// Parenthesis so that the math "FOIL"s properly
 	 	calc = "(" + calc + ")";
 	 } 
 	 clear.onclick = function(event){

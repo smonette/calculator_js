@@ -1,5 +1,5 @@
-
 window.onload = function () {
+
 
 	var calc = " ";
 	var lastInput = null;
@@ -10,12 +10,16 @@ window.onload = function () {
 	};
 
 	var display= function(y) {
-
-		if( isNaN(lastInput) && y >= 0 ){ // tests to see if the last input was not a number
+		// test if the last input was not a number. Replace the display with the current input
+		if( isNaN(lastInput) && y >= 0 ){ 
 			result_display_value.innerHTML = y;
-		} else if ( y >= 0){ // if the last input was a number, concat on this new number
+		} 
+		// if the last input was a number, concat on this new number
+		else if ( y >= 0){ 
 			result_display_value.innerHTML += y;
-		} else { // else display the math symbol on the left
+		} 
+ 		// else display the math symbol on the left
+		else {
 			op_display.innerHTML= y;
 		}
 		lastInput = calc[calc.length - 1];
@@ -97,13 +101,13 @@ window.onload = function () {
 	 divide.onclick = function(event) {
 	 	calculate("/");
 	 } 
-
 	 ent.onclick = function(event) {
 	 	clearDisplay();
 	 	result_display_value.innerHTML = eval(calc);
 	 } 
-
 	 clear.onclick = function(event){
 	 	clearAll();
 	 } 	
+
+
 }

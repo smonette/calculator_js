@@ -2,28 +2,24 @@
 window.onload = function () {
 
 	var calc = " ";
+	var lastInput = null;
 
 	var calculate = function(x){
 		calc = calc + x;
 		display(x);
-
-		console.log(calc); // TODO: Remove this. Only for testing purposes.
 	};
+
 	var display= function(y) {
 
-		var lastInput = calc.length -1 ;
-
-		console.log(calc[lastInput]);
-
-		if(calc[lastInput] >= 0){
-			result_display_value.innerHTML += y;
-		} else if ( y >= 0){
-			console.log("else if");
+		if( isNaN(lastInput) && y >= 0 ){ // tests to see if the last input was not a number
 			result_display_value.innerHTML = y;
-		} else { 
+		} else if ( y >= 0){ // if the last input was a number, concat on this new number
+			result_display_value.innerHTML += y;
+		} else { // else display the math symbol on the left
 			op_display.innerHTML= y;
-			lastInput = "";
 		}
+		lastInput = calc[calc.length - 1];
+
 	};
 
 	var clearDisplay = function() {
@@ -34,7 +30,6 @@ window.onload = function () {
 	var clearAll = function() {
 		clearDisplay();
 		calc = " ";
-		console.log("calc is: " + calc); // TODO: Remove this. Only for testing purposes.
 	};
 
 

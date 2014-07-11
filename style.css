@@ -1,13 +1,14 @@
 
 #container {
-	background: grey;
+	background: #CDC0B7;
 	height: 350px;
 	width: 300px;
 	padding-top: 20px;
-	border-right: 3px solid black;
+	border-right: 2px solid black;
 	border-bottom: 4px solid black;
     border-radius: 5px;
     font-family: "Helvetica", sans-serif;
+	margin: 20px auto;
 }
 
 #result_display {
@@ -38,14 +39,14 @@
 	margin-right:auto;
 	margin-bottom:10px;
 	width: 90%;
-    border: 2px solid grey;
+    border: 2px solid #CDC0B7;
 }
 
 .button {
 	width: 22%;
 	height: 65%;
 	margin: 4px 0px 4px 7px;
-	background: #4d4d4d;
+	background: #474D63;
 	text-align: center;
 	padding-top: 10px;
 	color: white;
@@ -55,6 +56,9 @@
 	border-right: 1px solid black;
 	font-size: 20px;
 	cursor: pointer;
+}
+.button.compute {
+	background: #877281;
 }
 .button:active {
 	-moz-box-shadow:    inset 0 0 5px #000000;
